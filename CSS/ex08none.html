@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>none</title>
+    <style>
+        /* 
+        1. answer 부분을 보이지 않게 지정
+        2. question에 마우스를 올렸을 때
+            answer 답변이 보이도록 지정
+        */
+        .answer{
+            display: none;
+            color: red;
+            font-style: italic;
+        }
+        img{
+            display: none;
+        }
+        .question:hover+.answer{
+            display: inline;
+        }
+        .question:hover+img{
+            display: inline-block;
+        }
+        /* 
+        display : none -> 화면 상 영역 차지
+        */
+
+
+    </style>
+</head>
+<body>
+    <span class="question">Q. 오늘은 수업 끝나고 뭐하나요?</span>
+    <span class="answer">A. 고기파티다!
+        
+    </span>
+    <img src = "img/17bf848dd3c30c4fa.jpg">
+    <br><br>
+    <span class="question">Q. 가장 재밌는 수업은 무엇인가요?</span>
+    <span class="answer">A. HTML,CSS 입니다!</span>
+</body>
+</html>

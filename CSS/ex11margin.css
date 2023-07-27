@@ -1,0 +1,30 @@
+div{
+width: 100px;
+height: 100px;
+}
+
+#redBox {
+    background-color: red;
+}
+
+#blueBox {
+    background-color: blue;
+    background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHcLiw%2FbtslpXo69qa%2F6BO7EpmX3dKHtKDbGHb680%2Fimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+
+#greenBox {
+    background-color: green;
+
+}
+
+#grayBox {
+    background-image: url(./img/KakaoTalk_20230724_210719035.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+       
+}
+

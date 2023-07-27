@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="./ex11margin.css">
+    <style>
+        #parent{
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        #redBox {
+            /* static : 정적인
+            position 속성의 기본 값
+            위치속성 비활성화 */
+            position: static;
+            top:30px
+        }
+        #blueBox{
+            /* relative : 상대적인
+            기준 : 본인이 원래 있었던 위치
+            위치속성 활성화 */
+            position: relative;
+            top: 20px;
+            left: 200px;
+        }
+        #greenBox{
+            /* absolute : 절대적인
+            기준 : static이 아닌 부모요소, 없다면 body
+            위치속성 활성화
+             */
+            position:absolute;
+            top: 200px;
+            left:150px;
+
+        }
+        #grayBox{
+            /* fixed : 고정된
+            기준 : body
+            위치속성 활성화
+            부모, 스크롤 전부 무시
+             */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="redBox">red</div>
+        <div id="blueBox">blue</div>
+        <div id="greenBox">green</div>
+        <div id="grayBox">gray</div>
+    </div>  
+
+    
+</body>
+
+</html>

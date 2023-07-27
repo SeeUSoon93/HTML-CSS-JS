@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu practice</title>
+    <style>
+        .cardWrap{
+            /* 메뉴판 전체 영역을 container
+            하나의 영역을 item으로
+             */
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: space-around;
+        }
+        .pokemonWrap{
+            background-color: rgb(240, 255, 186);
+            margin: 50px;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .imgSec{
+            width: 300px;
+            height: 300px;
+            
+            background-size: cover;
+            background-position: center;
+        }
+        .img1{
+            background-image: url(https://t1.daumcdn.net/cfile/tistory/9987243C5FA7ECDB0C);
+        }
+        .img2{
+            background-image: url(https://image.fmkorea.com/files/attach/new3/20230609/486616/2857140960/5851877812/59d4b89e99e6a0afcbb9a1e8ae0d7a99.jpg);
+        }
+        .img3{
+            background-image: url(https://dthezntil550i.cloudfront.net/zi/latest/zi2105151302203590020464358/bbac179b-1ea2-4fa3-acf8-3d9b4566f911.png);
+        }
+        .img4{
+            background-image: url(./img/KakaoTalk_20230724_210719035.jpg);
+        }
+        .img5{
+            background-image: url(https://mblogthumb-phinf.pstatic.net/MjAxOTA1MDdfMjc1/MDAxNTU3MjE5MTgzMjY5.DQwQpQFlVNGMsF0xgb8CnD0ZxU6eUcXt7gfBPqinEkMg.NoSOhwRQP5FlCP3UIjaGonLyXc-gphDAsaZvdK0au1sg.PNG.cine_play/%ED%94%BC%EC%B9%B4%EC%B8%842.png?type=w800);
+        }
+        .img6{
+            background-image: url(https://i1.sndcdn.com/avatars-sn8HgEgiucAccV0D-yogYJA-t240x240.jpg);
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="cardWrap">
+
+        <div class="pokemonWrap">
+            <div class="imgSec img1">
+            </div>
+            <p class="textSec">파이리
+            </p>
+        </div>
+        <div class="pokemonWrap">
+            <div class="imgSec img2">
+            </div>
+            <p class="textSec">이상해씨
+            </p>
+        </div>
+        <div class="pokemonWrap">
+            <div class="imgSec img3">
+            </div>
+            <p class="textSec">꼬부기
+            </p>
+        </div>
+        <div class="pokemonWrap">
+            <div class="imgSec img4">
+            </div>
+            <p class="textSec">술쟁이
+            </p>
+        </div>
+        <div class="pokemonWrap">
+            <div class="imgSec img5">
+            </div>
+            <p class="textSec">피카츄
+            </p>
+        </div>
+        <div class="pokemonWrap">
+            <div class="imgSec img6">
+            </div>
+            <p class="textSec">메타몽
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

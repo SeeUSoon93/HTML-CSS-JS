@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <h3 align="center">
+        <img src="/HTML/img/썸네일.jpg" alt="" width="500px" >
+    </h3>
+    <hr>
+    <!-- form : 웹 페이지에 입력 폼을 만들 때 사용하는 태그
+    -> action - 폼 데이터가 전송되는 url 지정
+    -> method - 폼 데이터 전송 방식 지정(get/post)
+    -> name - 해당 form태그의 이름 지정
+    -->
+<form action="#">
+    <!-- input 기본 -->
+    <h3>기본 정보를 입력하시오.</h3>
+    <label for="userId">ID :</label>
+    <input type="text" id="userId"
+    placeholder="아이디를 입력하세요." autofocus>
+    <br>
+    <label for="userPw">PW :</label>
+    <input type="password" id="userPw"
+    placeholder="비밀번호를 입력하세요." maxlength="10">
+    <br>
+    <label>
+        주소 :
+        <input type="text"
+        placeholder="주소를 입력하세요."
+    </label>
+    <br><br><br>
+    
+    <!-- input 선택 -->
+    <!--  
+        checkbox - 다중 선택 가능
+        radio - 다중 선택 불가능
+    -->
+
+    <h3>커리큘럼에 포함된 과목을 모두 선택하시오.</h3>
+    <label>
+        Java
+        <input type="checkbox" name="subject" id="" value="Java">
+    </label>
+    <label>
+        DB
+        <input type="checkbox" name="subject" id="" value="DB">
+    </label>
+    <label>
+        Python
+        <input type="checkbox" name="subject" id="" value="Python">
+    </label>
+    <label>
+        HTML/CSS
+        <input type="checkbox" name="subject" id=""value="HTML/CSS" >
+    </label>
+    <br><br><br>
+
+    <h3>수강중인 지점을 선택하시오.</h3>
+    <label>
+    동구점<input type="radio" name="campus" id="" value="dong">
+    </label>
+    <label>
+    남구점<input type="radio" name="campus" id="" value="nam">
+    </label>
+    <label>
+    서구점<input type="radio" name="campus" id="" value="seo">
+    </label>
+    <br><br><br>
+
+    <!-- XXX input XXX -->
+    <h3>메일 주소를 입력하시오.</h3>
+    <input type="text">@
+    <select name="" id="">
+        <option value="">naver.com</option>
+        <option value="">daum.net</option>
+        <option value="">gmail.com</option>
+    </select>
+    <br><br><br>
+    <h3>자기소개를 작성하시오.</h3>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <br><br><br>
+    <!-- input 기타 -->
+    <h3>기타 정보를 입력하시오.</h3>
+    <input type="file" name="" id=""><br>
+
+    <input type="color" name="" id=""><br>
+
+    <input type="number" name="" id=""><br>
+
+    <input type="range" name="" id=""><br>
+
+    <input type="date" name="" id="">
+
+    <br><br><br>
+    <h3>엄마 보고싶다ㅜ-ㅜ</h3>
+
+    <!-- input 제출 및 초기화 -->
+    <!-- 
+        작성 위치 -> form 요소 내부
+        제출 및 초기화 대상 -> form 요소 내부 모든 데이터
+     -->
+    <input type="submit" >
+    <input type="reset">
+
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style>
+        #pxFont{
+            font-size: 10px;
+        }
+        div{
+            font-size: 10px;
+        }
+        #emFont{
+            /* em : 부모 요소 크기에 따른 배수 단위 */
+            font-size: 1.5em;
+        }
+        #remFont{
+            /* rem : html 문서의 폰트 크기에 따른 배수 단위 */
+            font-size: 1.5rem;
+        }
+
+        #wrap{
+            width:500px;
+            height: 500px;
+            background-color: aqua;
+        }
+        #container1{
+            /* % : 부모요소를 기준으로 상대크기 조절*/
+            width: 100vw;
+            height: 30%;
+            background-color: beige;
+        }
+        #container2{
+            /* vw/vh : 실행중인 창의 크기를 기준으로 상대크기 조젛*/
+            /* viewpoint weidt/height의 약자 */
+            /* vw를 height에서 vh를 width에서 사용가능(기준을 w/v로 잡음) */
+            width: 30%;
+            height: 100vw;
+            background-color: rgb(116, 141, 90);
+        }
+    </style>
+</head>
+<body>
+    <p>폰트 크기 기준!!</p>    
+    <p id="pxFont">px로 조정</p>
+    <div>
+        <p id="emFont">em으로 조정</p>
+    </div>
+    <p id="remFont">rem으로 조정</p>
+
+    <div id ="wrap">
+        <div id="container1"></div>
+        <div id="container2"></div>
+    </div>
+
+
+
+</body>
+</html>

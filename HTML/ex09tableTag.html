@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table tag</title>
+</head>
+<body>
+    <!--  table : 테이블이 들어갈 공간을 만들어주는 태그 -->
+    <table align="center" border="10px solid black">
+        <!-- table row : 테이블에 한 줄을 만들어주는 태그 -->
+        <tr bgcolor="red" style="color: aliceblue;">
+            <!-- table head : 제목 셀로 값이 담기는 태그 -->
+            <th>이름</th>
+            <!-- colspan " column 묶음(가로 셀 병합)" -->
+            <th colspan="2">성별/주소</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <!-- table data : 일반 셀로 값이 담기는 태그 -->
+            <td>김군순</td>
+            <td>남자</td>
+            <td>광주</td>
+            <!-- rowspan : row 묶음 (세로 셀 병합) -->
+            <td rowspan="3">바보</td>
+        </tr>
+        <!-- tr>td*3 -->
+        <tr>
+            <td>이주희</td>
+            <td>여자</td>
+            <td>광주</td>
+        </tr>
+        <tr>
+            <td>정봉균</td>
+            <td>남자</td>
+            <td>서울</td>
+        </tr>        
+    </table>
+
+
+
+
+</body>
+</html>

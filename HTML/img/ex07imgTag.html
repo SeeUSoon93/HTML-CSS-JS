@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img Tag</title>
+</head>
+<body>
+    <b><h1 align="center" style="color: #385181;">순상생활</h1></b>
+    <hr width="700">
+    <!-- 
+        img 태그 : 웹페이지에서 이미지를 띄우는 태그
+        -> src - 이미지 경로 작성
+        -> alt - 사용자에게 이미지를 설명
+                네트워크 오류, 컨텐츠 차단 등
+                이미지를 불러올 수 없을 때
+     -->
+     <!-- 
+        절대경로 : 페이지나 파일이 가지고 있는 고유한 경로
+        -> 이미지 오르쪽 마우스 > 이미지 주소 복사
+      -->
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHcLiw%2FbtslpXo69qa%2F6BO7EpmX3dKHtKDbGHb680%2Fimg.jpg"
+     alt="" width="200px" >
+
+    <!-- 
+        상대경로 : 특정 위치를 기준으로 파일을 가지고 오는 경로
+        -> 현재 위치 기준 : ./ or 생략
+        -> 상위 폴더 기준 : ../
+
+     -->
+    <!-- 현재 위치 기준 -->
+    <img src="./JDBC.jpg" alt="" width="200px">
+    <img src="./JDBC.jpg" alt="" width="200px">
+    
+    <!-- 상위 폴더 기준 -->
+     <img src="../../HTML/img/상속.jpg" alt="" width="200px">
+    
+    <!-- 루트 기준 -->
+    <img src="/HTML/img/상속.jpg" alt="" width="200px">
+
+
+    
+</body>
+</html>

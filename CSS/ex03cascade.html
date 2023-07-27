@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cascade</title>
+
+    <style>
+        /* cascade : 하나의 요소에 여러 스타일이 적용될 때 우선순위 */
+        
+        /*
+        전체선택자(0) < 태그선택자(1) < class선택자(10) < id선택자(100) < 스타일속성(인라인)
+        !important -> 최상위 적용 키워드
+        */
+         
+        #idsel{
+             color: rgb(207, 210, 30);
+        }
+        li{
+            color: rgb(61, 29, 177);
+        }
+        *{
+            color: rgb(33, 156, 33);            
+        }
+        .classsel{
+            /* !important 작성 위치 -> 선언문 끝 ; 앞에 작성 */
+            color: violet !important; 
+        }
+            </style>
+</head>
+<body>
+    <h2>떠든사람</h2>
+    <ul>
+        <li>김훈종</li>
+        <li id="idsel" class="classsel" style="color: rgb(5, 2, 2);">최윤석</li>
+        <li>임유민</li>
+    </ul>
+
+</body>
+</html>
