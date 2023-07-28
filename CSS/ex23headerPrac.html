@@ -10,10 +10,11 @@
             display: flex;
             list-style-type: none;
             font-size: 1.25rem;
+            align-items: center
         }
         .container{
             display: flex;
-            background-color: #ffffff;
+            /* background-color: #ffffff; */
             padding: 0 10%;
             justify-content: space-between;
         }
@@ -23,14 +24,33 @@
         }
         li{
          margin: 0 15px;   
+         /* background-color: #ffffff; */
+         /* padding: 15px 0px; */
         }
+        .joinBtn{
+            background-color: #008acc;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
 
+        }
+        li:hover{
+            color: #008acc;
+            text-decoration: underline;
+            text-underline-position: under;
+            cursor: pointer;
+        }
+        .joinBtn:hover{
+            background-color: #0d4660;
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="imgSec">
-            <img src="./img/123.png" alt="" width="200px">
+            <img src="./img/123.png" alt="" width="250px">
         </div>
         <ul>
             <li>순이캘리</li>
@@ -39,6 +59,7 @@
             <li>순이코딩</li>
             <li>순이만화</li>
             <li>순이일상</li>
+            <li class="joinBtn">싸인신청</li>
         </ul>
     </div>
 </body>

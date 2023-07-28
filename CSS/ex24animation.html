@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /* animation : 요소에 적용되는 스타일을 다른 스타일로
+                        부드럽게 전환시켜주는 속성         */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            background-image: url(./img/훈종.jpg);
+            background-size: cover;
+            background-position: center;
+            
+
+            /* 이름 지정 */
+            animation-name: boxAni;
+
+            /* 지속 시간 */
+            animation-duration: 1s;
+
+            /* 반복 횟수 지점 */
+            animation-iteration-count: infinite;
+
+            /* 방향 지정
+            normal -> 기본값
+            reverse -> 역방향
+            alternate -> 왕복
+            alternate-reverse -> 역방향 왕복     */
+            animation-direction:alternate;
+
+            /* 지연 시간 지정 */
+            animation-delay: 2s;
+
+            /* 수치 변형 함수 지정 */
+            animation-timing-function: cubic-bezier(1,-0.77, 0, 1.28);
+
+        }
+        /* 애니메이션 움직임 제어 */
+        @keyframes boxAni {
+            from {
+                /* 시작 지점 */
+
+            }
+            to {
+                /* 도착 지점 */
+                margin-left: 200px;
+                background-image: url(./img/KakaoTalk_20230724_210719035.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* 
+        transform : 회전, 크기 조절, 기울이기, 이동 효과 등 요소를 변형하는 속성
+        
+        -> translate : 요소의 위치를 이동
+        -> scale : 요소의 크기를 확대 또는 축소
+        -> rotate : 요소를 회전(deg)
+        -> skew : 요소를 기울임 (deg)
+        */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #fdff9d;
+            background-image: url(./img/KakaoTalk_20230724_210719035.png);
+            background-size: cover;
+            font-size: 2rem;
+
+            transform: translate(50px, 50px) scale(1.1) rotate(10deg) skew(30deg,10deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">군순</div>
+</body>
+</html>

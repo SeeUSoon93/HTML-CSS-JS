@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #ffbd99;
+            background-image: url(https://item.kakaocdn.net/do/49a292677e5b578a8985bb315c19700c9f5287469802eca457586a25a096fd31);
+            background-size: cover;
+
+            transition-duration: 2s;
+            /* 어떤 속성에 transition을 줄지 지정 */
+            transition-property: background-image;
+           
+            /* 요소에 직접 적용
+            마우스 올릴 때, 내릴때 모두 적용 */
+        }
+        .box:hover{
+            background-image: url(./img/KakaoTalk_20230724_210719035.jpg);
+            
+            border-radius: 40%;
+
+            /* transition-duration: 2s; */
+
+            /* 이벤트에 적용
+            마우스를 올릴 때 적용, 내릴 때 적용 X */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

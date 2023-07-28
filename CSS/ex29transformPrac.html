@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform practice</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #9a9b66;
+            overflow: hidden;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition-duration: 1s;
+
+            /* animation-name: ani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+
+        }
+
+        .container:hover>img {
+            transform: scale(2) rotate(540deg);
+        }
+        /* @keyframes ani {
+            from {
+            }
+            to {
+                transform: scale(2) rotate(720deg);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./img/KakaoTalk_20230724_210719035.png" alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation practice</title>
+    <style>
+        /* 두개의 이미지가 2초 간격으로
+        계속해서 재생되는 화면 만들기 */
+        .imgSec{
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+
+            animation-name: imgAni;
+            animation-duration: 1.5s;
+            animation-direction:alternate;
+            animation-iteration-count: infinite;            
+        }
+        
+        @keyframes imgAni {
+            from{
+                background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F0CnWP%2FbtslpYhhmjH%2FeMbSRSvPTWrHicQA657uZk%2Fimg.jpg);
+            }
+            to{
+                background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHcLiw%2FbtslpXo69qa%2F6BO7EpmX3dKHtKDbGHb680%2Fimg.jpg);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="imgSec"></div>
+</body>
+
+</html>
