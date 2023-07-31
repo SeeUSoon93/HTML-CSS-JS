@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS start</title>
+    <style>
+        @font-face {
+            font-family: 'CookieRun-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'CookieRun-Regular', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">안녕하세용!</a>
+    <br><br>
+    <button id="btn1">피자 🍕</button>
+    <button id="btn2">치킨 🍗</button>
+    <br>
+    <ul>
+        <li>소주</li>
+        <li>맥주</li>
+        <li>막걸리</li>
+    </ul>
+    <h1>오늘은 7월 31일!</h1>
+    <p>재밌는 술파티!🍻</p>
+
+    <script>
+        // 첫번째 버튼 클릭 시
+        document.getElementById('btn1').addEventListener('click', () => {
+            // 배경색, 글씨색 스타일 변경
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'pink';
+        })
+        // 두번째 버튼 클릭 시
+        document.getElementById('btn2').addEventListener('click', () => {
+            // 배경색, 글씨색 스타일 변경
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+        })        
+    </script>
+</body>
+
+</html>

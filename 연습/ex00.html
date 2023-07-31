@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <style>
+        #pxFont {
+            font-size: 10px;
+        }
+
+        div {
+            font-size: 10px;
+        }
+
+        #emFont {
+            font-size: 1.5em;
+        }
+
+        #remFont {
+            font-size: 1.5rem;
+        }
+
+        #wrap {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        #container1 {
+            width: 100vw;
+            height: 30%;
+            background-color: beige;
+        }
+
+        #container2 {
+            width: 30%;
+            height: 100vw;
+            background-color: rgb(116, 141, 90);
+        }
+    </style>
+
+<body>
+    <p>폰트 크기 기준!!</p>
+    <p id="pxFont">px로 조정</p>
+    <div>
+        <p id="emFont">em으로 조정</p>
+    </div>
+    <p id="remFont">rem으로 조정</p>
+    <div id="wrap">
+        <div id="container1"></div>
+        <div id="container2"></div>
+    </div>
+</body>
+
+</html>
