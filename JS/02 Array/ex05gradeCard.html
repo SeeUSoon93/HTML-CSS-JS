@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Card</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // 1. 과목 수 입력
+        // 2. 과목 수만큼 과목 이름 입력
+        // 3. 각 과목들의 점수를 입력
+        // 4. 총점, 평균 점수 도출
+        // 5. 각 점수, 총합, 평균을 HTML문서 내 테이블로 출력
+
+        let subList = [];
+        let gradeList = [];
+        let sumGrade = 0;
+        let avgGrade = 0;
+
+        let subCnt = Number(prompt('과목 수 입력'))
+
+        document.write
+        for (let i = 0; i < subCnt; i++) {
+            let sub = prompt('점수를 입력할 과목을 입력하세요')
+            subList.push(sub)
+            let grd = Number(prompt(`${sub}의 점수를 입력하세요`))
+            gradeList.push(grd)
+            sumGrade += grd
+        }
+        subList.push('총합');
+        subList.push('평균');
+        gradeList.push(sumGrade);
+        gradeList.push(sumGrade / subCnt);
+
+        console.log(subList);
+        console.log(gradeList);
+
+        document.write('<table border="1">');
+            document.write('<tr>');
+                for(let i = 0; i < subList.length;i++){
+                    document.write('<th>');
+                    document.write(subList[i])
+                    document.write('</th>');                
+                }
+            document.write('</tr>');
+            
+            document.write('<tr>');
+                for(let i = 0; i < gradeList.length;i++){
+                    document.write('<td>');
+                    document.write(gradeList[i])
+                    document.write('</td>');                
+            }
+            document.write('</tr>');
+        document.write('</table>')
+
+    </script>
+</body>
+
+</html>

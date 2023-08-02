@@ -4,19 +4,30 @@
 
 // 배경색 바꾸는 코드는 ex02 참고
 
-while (true) {
-    let color = prompt('색상을 입력하세용~ (red🧡 / green💚 / blue💙)');
 
-    if (color == 'red') {
-        document.querySelector('body').style.backgroundColor = 'red';
-        break;        
-    } else if (color == 'green') {
-        document.querySelector('body').style.backgroundColor = 'green';
-        break;
-    } else if (color == 'blue') {
-        document.querySelector('body').style.backgroundColor = 'blue';
-        break;
-    } else {
-        alert('다시 입력하세요💥');
-    }    
+let color = prompt('색상을 입력하세용~ (red🧡 / green💚 / blue💙)');
+
+// if문
+// if (color == 'red') {
+//     document.querySelector('body').style.backgroundColor = 'red';
+//     // break;        
+// } else if (color == 'green') {
+//     document.querySelector('body').style.backgroundColor = 'green';
+//     // break;
+// } else if (color == 'blue') {
+//     document.querySelector('body').style.backgroundColor = 'blue';
+//     // break;
+// } else {
+//     alert('다시 입력하세요💥');
+// }
+
+// switch 문
+
+switch(color) {
+    case 'red' : break;
+    case 'green' : break;
+    case 'blue' : break;
+    default : alert('다시 입력하세요💥');
+    
 }
+document.querySelector('body').style.backgroundColor = color;
