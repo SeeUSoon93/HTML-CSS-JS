@@ -6,11 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Card</title>
     <style>
+        @font-face {
+            font-family: 'TTTtangsbudaejjigaeB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        table {
+            font-size: .9em;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        th {
+            padding: 1em .5em;
+            vertical-align: middle;
+            text-align: center;
+            font-family: 'TTTtangsbudaejjigaeB';
+        }
+        td {
+            padding: 1em .5em;
+            vertical-align: middle;
+            background-color: #fff;
+            text-align: center;            
+        }
+        tr {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            background-color: #f5f9fc;
+        }
     </style>
 </head>
 
 <body>
-
     <script>
         // 1. 과목 수 입력
         // 2. 과목 수만큼 과목 이름 입력
@@ -18,8 +48,8 @@
         // 4. 총점, 평균 점수 도출
         // 5. 각 점수, 총합, 평균을 HTML문서 내 테이블로 출력
 
-        let subList = [];
-        let gradeList = [];
+        let subList = ['이름'];
+        let gradeList = ['✨김군순✨'];
         let sumGrade = 0;
         let avgGrade = 0;
 
@@ -38,27 +68,25 @@
         gradeList.push(sumGrade);
         gradeList.push(sumGrade / subCnt);
 
+        // 콘솔로 1차 확인
         console.log(subList);
         console.log(gradeList);
 
-        document.write('<table border="1">');
-            document.write('<tr>');
-                for(let i = 0; i < subList.length;i++){
-                    document.write('<th>');
-                    document.write(subList[i])
-                    document.write('</th>');                
+        // 테이블 작성
+        let printable = 
+        `<table>
+            <tr>
+                for (let i = 0; i < subList.length; i++) {
+                    <th>subList[i]</th>
                 }
-            document.write('</tr>');
-            
-            document.write('<tr>');
-                for(let i = 0; i < gradeList.length;i++){
-                    document.write('<td>');
-                    document.write(gradeList[i])
-                    document.write('</td>');                
-            }
-            document.write('</tr>');
-        document.write('</table>')
-
+            </tr>
+            <tr>
+                for (let i = 0; i < gradeList.length; i++) {
+                    <td>gradeList[i]</td>
+                }
+            </tr>
+        </table>`
+        document.write(printable)
     </script>
 </body>
 

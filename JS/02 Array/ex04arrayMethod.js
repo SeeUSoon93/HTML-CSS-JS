@@ -15,7 +15,7 @@ console.log('훈종 퇴출💦',soonsTeam);
 soonsTeam.unshift('천재 윤석')
 console.log('팀 교체💦',soonsTeam);
 
-// 4. 첫번째 인덱스 데이터 삭제 : unshift(value);
+// 4. 첫번째 인덱스 데이터 삭제 : shift(value);
 soonsTeam.shift()
 console.log('팀 수복✨',soonsTeam);
 
