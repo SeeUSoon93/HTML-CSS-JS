@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Colection</title>
+</head>
+<body>
+    <h3 id="h3Tag">우리반 점심</h3>
+    <ul>
+        <li>한식</li>
+        <li>안먹어..</li>
+        <li>협의중..</li>
+    </ul>
+    <p class="pTag">배고파 죽겄소~!!!!!</p>
+    <script>
+        // HTML Collection -> 유사 배열
+        // getElementsByTagName, getElementsByClassName 등
+        // 배열의 형태, 인덱스ㅇ, 길이ㅇ, 배열 함수X
+        
+
+        // h3요소 id로 가져오기
+        let h3Element = document.getElementById('h3Tag');
+        console.log(h3Element);
+
+        // li요소 태그이름으로 가져오기
+        let liList = document.getElementsByTagName('li');
+        console.log(liList);
+
+        // 한식 글자만 가져오기
+        console.log(liList[0].innerText);
+
+        for(let li of liList){
+            console.log(li.innerText);
+        }        
+
+        let pElement = document.getElementsByClassName('pTag')
+        console.log(pElement[0].innerText)
+    </script>
+</body>
+</html>

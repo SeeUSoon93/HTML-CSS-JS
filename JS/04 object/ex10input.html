@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <input type="text" id="inputTag">        
+    <button onclick="getText()">클릭</button>
+
+    <script>
+        // input,
+
+        // 버튼 클릭 시, input 요소 안의 텍스트를 출력
+
+        const getText = () => {
+            let inputElement = document.getElementById("inputTag").value;
+            alert(inputElement);
+            document.write(inputElement)
+        }
+    </script>
+</body>
+</html>

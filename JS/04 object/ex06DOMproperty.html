@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM property</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <p>안녕 군순이~</p>        
+    </div>
+    <button onclick="textFunc()">술주기</button>
+    <button onclick="htmlFunc()">때리기</button>
+
+    <script>
+        // 1. div 요소에 접근하기
+        let domVal = document.getElementById('container');
+
+        // 2. text버튼 클릭 시 요소에서 내용만
+        const textFunc = () =>{
+            // div요소를 가져와서 내용만 출력
+            console.log('내용만 : ', domVal.innerText);
+            // 내용 변경
+            domVal.innerText = '거짓말이지롱~';            
+        }
+
+        // 3.html 버튼 클릭시 요소에 태그까지
+        const htmlFunc = () => {
+            domVal.innerHTML = "<img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbIe97a%2FbtsplPtzPFs%2FTgVHgmqI0KCuIZhuz6TnP0%2Fimg.png' width='150px'>"
+        }
+
+    </script>
+</body>
+
+</html>

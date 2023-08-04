@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="h1Func()">h1태그 생성</button>
+    <button onclick="aFunc()">a태그 생성</button>
+    <button onclick="ulFunc()">ul태그 생성</button>
+
+    <!-- 태그가 생성될 공간 -->
+    <div id="container"></div>
+
+    <script>
+        // 1. 태그를 생성할 공간이 div 요소 가져오기
+        // 2. 버튼 별로 가지고 온 div요소 안에 태그 생성하기
+        let domVal = document.getElementById('container');
+
+        const h1Func = () => {
+            domVal.innerHTML += 
+            `<h1>순상생활(순이의 일상)</h1>`;
+        }
+
+        const aFunc = () => {
+            domVal.innerHTML += `
+            <h2><a href='https://soonart.tistory.com/' target='_blank'>순상생활로 어서오세요~</a></h2>`;
+        }
+        
+        const ulFunc = () => {
+            domVal.innerHTML += `<ul>
+                <li><a href='https://soonart.tistory.com/category/%EC%88%9C%EC%9D%B4%EB%94%94%EC%9E%90%EC%9D%B8'target='_blank'>순이디자인</a></li>
+                <li><a href='https://soonart.tistory.com/category/%EC%88%9C%EC%9D%B4%EC%BD%94%EB%94%A9'target='_blank'>순이코딩</a></li>
+                <li><a href='https://soonart.tistory.com/category/%EC%88%9C%EC%9D%B4%EA%B7%B8%EB%A6%BC' target='_blank' >순이그림</a></li></ul>
+                <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbIe97a%2FbtsplPtzPFs%2FTgVHgmqI0KCuIZhuz6TnP0%2Fimg.png' width='200px'>`;
+        }
+
+    </script>
+</body>
+
+</html>

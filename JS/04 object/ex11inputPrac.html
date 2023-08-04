@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input practice</title>
+</head>
+<body>
+    <form action="#">
+    <h1>금일 참석신청 및 목록</h1>
+    <input type="text" id="name">    
+    <button onclick="getText()" type="reset">참석</button>
+    </form>
+    <div id="divTag"></div>
+
+    <script>
+        let domVal = document.getElementById('divTag');
+
+        const getText = () => {
+            let getName = document.getElementById("name").value+'<br>'
+            console.log(getName)
+            domVal.innerHTML += getName
+        }
+
+    </script>
+
+</body>
+</html>
