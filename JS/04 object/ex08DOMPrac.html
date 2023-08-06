@@ -10,15 +10,34 @@
 <body>
     <span id="spanTag">0</span>
     <br>
-    <button onclick="">+1 증가</button>
-    <button onclick="">-1 감소</button>
+    <button onclick="plusFunc()">+1 증가</button>
+    <button onclick="minusFunc()">-1 감소</button>
+    <div id="con"></div>
 
     <script>
-        let domVal = document.getElementById('container');
+        let domVal = document.getElementById('spanTag');
+        let domVal2 = document.getElementById('con');
 
-        const h1Func = () => {
-            domVal.innerHTML +=
-                `<h1>순상생활(순이의 일상)</h1>`;
+        const plusFunc = () => {
+            num = Number(domVal.innerHTML)
+            num += 1;
+            domVal.innerHTML = num;
+            domVal2.innerHTML += "<img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbIe97a%2FbtsplPtzPFs%2FTgVHgmqI0KCuIZhuz6TnP0%2Fimg.png' width='50px'>"
+            console.log(domVal2.innerHTML)
+        }   
+        const minusFunc = () => {
+            num = Number(domVal.innerHTML)
+            if (num == 0) {
+                domVal.innerHTML = num
+            } else {
+                num -= 1;
+                domVal.innerHTML = num                
+                let img=``;
+                for (let i = 0; i < num; i++) {
+                    img += `<img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbIe97a%2FbtsplPtzPFs%2FTgVHgmqI0KCuIZhuz6TnP0%2Fimg.png' width='50px'>`                       
+                }
+                domVal2.innerHTML = img;
+            }
         }
     </script>
 </body>
