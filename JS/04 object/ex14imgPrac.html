@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="imgId" class="imgClass" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fp3c77%2FbtrquiJjf7h%2FTLD6iZKikP4puk8HbcoPn1%2Fimg.jpg"
+    height="400px"    
+    alt="">
+    <br>
+    <button onclick="changefunc()">바꾸기</button>
+
+    <script>
+        let img1 = 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fp3c77%2FbtrquiJjf7h%2FTLD6iZKikP4puk8HbcoPn1%2Fimg.jpg'
+        let img2 = 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLEJ8a%2FbtrqysqCEHX%2FQqVm7QLc48xx5xViWyT6Pk%2Fimg.jpg'
+        let imgElement = document.querySelector('img')
+        // imgElement = document.getElementById('imgId')
+        // imgElement = document.getElementsByClassName('imgClass')
+        // imgElement - document.querySelector('#imgId')
+        // imgElement - document.querySelector('.imgClass')
+        
+        const changefunc=()=>{
+            if(imgElement.src == img2){
+                imgElement.src=img1;    
+            }else{            
+            imgElement.src=img2;
+            }
+        }
+    </script>
+    
+</body>
+</html>

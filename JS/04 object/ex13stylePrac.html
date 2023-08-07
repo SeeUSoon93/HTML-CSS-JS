@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Practice</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #redBox {
+            background-color: red;
+        }
+
+        #blueBox {
+            background-color: blue;
+        }
+
+        #greenBox {
+            background-color: green;
+        }
+
+        #grayBox {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <button onclick="movefunc()">이동하기!</button>
+    <button onclick="borderfunc()">둥글게!</button>
+
+    <script>
+        let red = document.querySelector('#redBox');
+        let blue = document.querySelector('#blueBox');
+        let green = document.querySelector('#greenBox');
+        let gray = document.querySelector('#grayBox');
+        
+        const movefunc = () => {
+            blue.style.margin = '0 0 0 100px'
+            green.style.margin = '0 0 0 200px'
+            gray.style.margin = '0 0 0 300px'
+        }
+        const borderfunc = () => {
+            let boxElement = document.querySelectorAll('div');
+            for (let i = 0; i < 4; i++) {
+                boxElement[i].style.borderTopRightRadius = '50%'
+                boxElement[i].style.borderBottomLeftRadius = '50%'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

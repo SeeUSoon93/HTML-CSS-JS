@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="spanId" class="spanClass">
+        김군순 김군순 김군순</span>
+    <br>
+    <button onclick="clickFunc()">클릭하세용~</button>
+
+    <script>
+        /*
+        DOM 스타일 제어
+        HTMLElement.style.property = value
+
+        querySelector(All) : CSS 선택자로 요소 검색
+        */ 
+        let spanElement = document.getElementById('spanId');
+        spanElement = document.getElementsByClassName('spanClass')[0];
+        spanElement = document.querySelector('#spanId');
+        spanElement = document.querySelectorAll('.spanClass')[0];
+        console.log(spanElement);
+        const clickFunc = () =>{
+            spanElement.style.color='tomato';
+            spanElement.style.fontSize = '25px';
+            spanElement.style.fontWeight = 900;
+        }
+    </script>
+</body>
+</html>
