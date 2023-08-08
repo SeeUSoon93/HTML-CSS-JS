@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like practice</title>
+    <style>
+        button {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            width: 50px;
+            height: 30px;
+            border-color: #ffffff00;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FWMLyf%2FbtsqrNBTIKb%2F0DeWha0MKLAmCPgEc2w1JK%2Fimg.png"
+        width="250px" alt="">
+    <br><br>
+    <button class="likeBtn">🤍</button>
+    <span>김군순님 외 216</span>
+    <br>
+    <input type="text">
+    <button class="textBtn">게시</button>
+    <br>
+    <div class="container">
+        <p>
+            임유민 : 혀가 거짓말하면 뭔지 아세요?
+            <button class="removeBtn" style="color: rgb(141, 141, 141);">X</button>
+        </p>
+    </div>
+
+    <script>
+        /*
+        속성 추가 및 제거 관련
+        attr(추가할 속성, 속성의 값) : 속성 추가 메소드
+        removeAttr(제거할 속성) : 속성 제거 메소드
+        $(A).prepend(B) : B를 A요소 첫번째 위치체 추가 메소드
+        $(A).append(B) : B를 A요소 마지막 위치에 추가 메소드
+
+        input 요소 관련
+        val() : input 입력 값 접근 (JS - value 속성)
+        input 요소 값 비워주기 -> input반환객체.val('')
+
+        부모 관련
+        parent() : 가장 가까운 부모 요소 선택 메소드
+        parents() : 모든 부모 요소 선택 메소드
+        closest(원하는요소) : 모든 부모 요소 대상, 원하는 요소 접근 가능
+        */
+
+        /*
+        1. 좋아요 버튼 클릭 시
+        버튼 안의 텍스트를 좋아요 -> 좋아요취소
+        숫자 0 -> 1
+        */
+        $(document).on('click', '.likeBtn', e => {
+            $(e.target).text('🧡');
+            $('span').text('김군순님 외 217');
+            $(e.target).removeAttr('class');
+            $(e.target).attr('class', 'dislikeBtn');
+        })
+        /*
+        2. 좋아요취소 버튼 클릭 시
+        버튼 안의 텍스트를 좋아요취소 -> 좋아요
+        숫자 1 -> 0
+        */
+        $(document).on('click', '.dislikeBtn', e => {
+            $(e.target).text('🤍');
+            $('span').text('김군순님 외 216');
+            $(e.target).removeAttr('class');
+            $(e.target).attr('class', 'likeBtn');
+        })
+        /*
+        3. 댓글 작성 버튼 클릭 시
+           입력한 내용을 댓글로 + 삭제 버튼 생성
+        */        
+        $(document).on('click','.textBtn',()=>{  
+            // input 입력 값 가져오기
+            // JS -> value
+            // jQuery -> val()
+            inputVal = $('input').val();
+            $('.container').append(`<p>
+            ${inputVal}
+            <button class="removeBtn" style="color: rgb(141, 141, 141);">X</button>
+            </p>`)
+            // input 입력 값 비워주기
+            $('input').val('');
+        })
+        /*
+        4. 삭제 버튼 클릭 시
+           해당 댓글+삭제 버튼 삭제
+        */
+        $(document).on('click','.removeBtn', e =>{
+            // $(e.target).parent().remove();
+            // $(e.target).parents().remove();
+            $(e.target).closest('p').remove(); 
+        })
+    </script>
+</body>
+
+</html>

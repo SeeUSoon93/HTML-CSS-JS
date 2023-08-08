@@ -17,15 +17,15 @@
         // 1. 타이머가 들어가는 공간
         let divVal = document.querySelector('div');
         console.log(divVal)
-
+        // 10초동안 1초마다 누적된 시간 출력
         for (let i = 1; i <= 10; i++) {
             setTimeout(() => {
                 divVal.innerHTML += i+'초'+'<br>';
             }, Number(i+'000'));
         }
-
+        // 클릭할때마다 이모티콘 출력
         document.querySelector('button').addEventListener('click',()=>{
-            divVal.innerHTML += '💥'+'<br>'
+            divVal.innerHTML += '😆'+'<br>'
         })
 
     </script>

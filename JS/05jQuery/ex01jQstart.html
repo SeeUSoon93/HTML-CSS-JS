@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery start</title>
+    <!-- jQuery 라이브러리 연동하기 -->
+    <!-- 1. 다운로드 방식 -->
+    <!-- <script src="./code.jquery.com_jquery-3.7.0.min.js"></script> -->
+
+    <!-- 2. 네트워크 방식 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <h1>jQuery start</h1>
+    <button id="txtBtn">TEXT</button>
+    <button id="htmlBtn">HTML</button>
+
+    <script>
+        /*
+        jQuery / $
+        -> wrapper(래퍼) : 인자로 전달된 요소들에 jQuery의 기능성을 부가해서 반환
+        $(선택자)
+        */
+
+        // 1. h1요소 접근
+        let valJS = document.querySelector('h1');
+        console.log(valJS);
+        // let valjQuery = jQuery('h1');
+        let valJQ = $('h1');
+        console.log(valJQ);
+
+        // 2. TEXT 버튼 클릭 시 내용만
+        // JS -> innerText
+        // jQ -> text()
+        $('#txtBtn').click(()=>{
+            console.log('text');
+            $('h1').text('군순이 짱')
+        })
+
+        // 3. HTML 버튼 클릭 시 태그까지
+        // JS -> innerHTML
+        // JQ -> html()
+        $('#htmlBtn').click(()=>{
+            $('h1').html('<a href="https://soonart.tistory.com/entry/%EC%9D%B4%EB%AA%A8%ED%8B%B0%EC%BD%98%EC%88%9C%EC%9D%B4%ED%8B%B0%EC%BD%98" >순이티콘출시</a>')
+        })
+
+    </script>
+</body>
+</html>

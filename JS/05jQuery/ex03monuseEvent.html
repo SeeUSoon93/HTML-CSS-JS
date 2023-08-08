@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</head>
+<body>
+    <div>
+    <h1>🐭마우스 이벤트🐭</h1>
+    <h1>🐭마우스 이벤트🐭</h1>
+    <h1>🐭마우스 이벤트🐭</h1>
+    <button>야옹~🐱</button>
+    </div>    
+    <script>
+        /*
+        $(선택자).on(이벤트타입, 이벤트 핸들러);
+        */
+       
+        /*
+        this : 호출한 HTML 객체를 저장
+        ** 화살표 함수 안X -> 대체 : (e) => {e.target}
+        */ 
+
+
+        // 1. 버튼 클릭 시, h1 요소 파란색
+        // 2. h1 요소 마우스 오버 시, h1 요소 빨간색
+        // 3. h1 요소 마우스 아웃 시, h1 요소 검은색
+        $(document).on('click','button',()=>{
+            $('h1').css('color','blue')           
+        })
+        $(document).on('mouseover','h1',function(){
+            // h1 전체 이벤트 동작
+            $('h1').css('color','red')
+            
+            // 마우스 올라간 h1만 동작
+            // $(this).css('color','red')
+        }).on('mouseout','h1',(e)=>{
+            $(e.target).css('color','black')
+        })
+
+
+    </script>
+</body>
+</html>
