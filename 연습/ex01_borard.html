@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01_borard</title>
+    <style>
+        table{
+            width: 400px;
+        }
+        .trHead{
+            height: 50px;
+            background-color: gray;
+            text-align: left;
+        }
+        .trCon{
+            height: 35px;
+            background-color: whitesmoke;
+        }
+        .td1{
+            text-align: right;
+        }
+        .td2{
+            text-align: left;
+        }
+        .btn{
+            text-align: center;
+        }        
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <table>
+            <tr class="trHead">
+                <th colspan="2" >STEP 1 : 아이디/비번 입력</th>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">아이디 : </td>
+                <td class="td2"><input type="text"></td>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">비밀번호 : </td>
+                <td class="td2"><input type="text"></td>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">비밀번호 확인 : </td>
+                <td class="td2"><input type="text"></td>
+            </tr>
+
+            <tr class="trHead">
+                <th colspan="2" >STEP 2 : 개인정보</th>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">성별 : </td>
+                <td class="td2">
+                    <label>남<input type="radio" name="gender" value="male"></label>
+                    <label>여<input type="radio" name="gender" value="female"></label>
+                </td>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">혈액형 : </td>
+                <td class="td2">
+                    <select name="abcd" id="">
+                        <option value="a">A형</option>
+                        <option value="b">B형</option>
+                        <option value="c">C형</option>
+                        <option value="d">D형</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">생일 : </td>
+                <td class="td2">
+                    <input type="text" placeholder="연도-월-일">
+                </td>
+            </tr>   
+
+            <tr class="trHead">
+                <th colspan="2">STEP 3 : 선호도</th>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">취미 : </td>
+                <td class="td2">
+                    <label for="">
+                       축구<input type="checkbox" name="hobby" id="football">
+                       야구<input type="checkbox" name="hobby" id="baseball">
+                       농구<input type="checkbox" name="hobby" id="basketball">
+                    </label>
+                </td>
+            </tr>
+            <tr class="trCon">
+                <td class="td1">좋아하는 색깔 : </td>
+                <td class="td2">
+                    <input type="color" name="col" id="">
+                </td>
+            </tr>
+        
+            <tr class="trHead">
+                <th colspan="2" >STEP 4 : 적고 싶은 말</th>
+            </tr>
+            <tr class="trCon" >
+                <td colspan="2">
+                    <textarea name="" id=""cols="60" rows="5"></textarea>
+                </td>
+            </tr>
+
+            <tr class="trCon">
+                <td class="btn" colspan="2">
+                    <input type="submit" >
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
