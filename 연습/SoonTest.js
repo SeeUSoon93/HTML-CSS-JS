@@ -1,7 +1,4 @@
-// HTML 구조가 다 로딩이 된 후에 실행
-$(document).ready(() => {
 
-});
 
 // 탭 기능
 const triggerTabList = document.querySelectorAll('#myTab button')
